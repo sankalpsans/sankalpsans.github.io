@@ -1,15 +1,23 @@
-<html>
-   <head>
-      <title>css-snake</title>
-   </head>
-   <body>
-      <div class="caption">Sankalp | <span class="emphasis">Hendrix</span></div>
-   </body>
-   <style type="text/css">
-      body{ padding:0;margin:0;background: #FFF;color: #DDD; float: left; font-family: sans-serif; }
-      .caption{padding: 5px; font-size:48px;}
-      .sub-caption{font-size: 14px; color: #fff; padding: 10px 6px 30px;}
-      .emphasis{color: #B1B1B1; font-style: italic;}
-   </style>
-   
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
