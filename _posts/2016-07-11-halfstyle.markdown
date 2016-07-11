@@ -1,6 +1,8 @@
 <html>
    <head>
-      <title>css-snake</title>
+      <title>Halfstyle Demo</title>
+      <link rel="stylesheet" href="https://rawgit.com/sankalpsans/HalfStyle/master/css/halfstyle.css" />
+      <script type="text/javascript" src = "https://rawgit.com/sankalpsans/HalfStyle/master/js/halfstyle.js"></script>
    </head>
    <body>
       <p>
@@ -97,44 +99,6 @@
 		On GitHub <a href="http://github.com/arbelh/HalfStyle">http://github.com/arbelh/HalfStyle</a>
 	</p>
    </body>
-   <style type="text/css">
-      body{ padding:0;margin:0;background: #FFF;color: #777; float: left; font-family: sans-serif; }
-      #board{ float: left;width:600px;height:600px;background: #757575; }
-      .pixel{ width:10px;height:10px;float: left;background:transparent; }
-      .pixel-lighted{background:#fff;}
-      .caption{padding: 5px; font-size:48px;}
-      .sub-caption{font-size: 14px; color: #bbb; padding: 10px 6px 30px;}
-   </style>
-   <script type="text/javascript">
-     /*!
- * HalfStyle
- * Copyright 2014 Arbel Hakopian
- * Licensed under MIT (https://github.com/arbelh/HalfStyle/blob/master/license.md)
- */
-window.onload = function(){ initHalfStyle(); };
-function initHalfStyle() {
-    var halfstyle_text, halfstyle_chars, $halfstyle_el, halfstyle_i, halfstyle_output, halfstyle_style;
-
-    // Iterate over all class occurrences
-    var domsToIterate = document.getElementsByClassName('textToHalfStyle');
-    for(var i = 0; i < domsToIterate.length; i = i + 1) {
-        halfstyle_el = domsToIterate[i];
-        halfstyle_style = halfstyle_el.attributes['data-halfstyle'].value;
-        halfstyle_text = halfstyle_el.innerText;
-        halfstyle_chars = halfstyle_text.split('');
-
-        // Set the screen-reader text
-	halfstyle_output = '<span style="position: absolute !important;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);">' + halfstyle_text + '</span>';
-
-        // Iterate over all chars in the text
-        for (halfstyle_i = 0; halfstyle_i < halfstyle_chars.length; halfstyle_i++) {
-            // Create a styled element for each character and append to container
-            halfstyle_output += '<span aria-hidden="true" class="halfStyle ' + halfstyle_style + '" data-content="' + halfstyle_chars[halfstyle_i] + '">' + halfstyle_chars[halfstyle_i] + '</span>';
-        }
-	halfstyle_el.innerHTML = halfstyle_output;
-    }
-};
-   </script>
    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
