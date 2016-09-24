@@ -64,6 +64,7 @@
         }
 
         .src-btn{
+            cursor:pointer;
             position: absolute;margin-left: 100px;margin-top: 13px;
     background: #4791da;
     color: #fff;
