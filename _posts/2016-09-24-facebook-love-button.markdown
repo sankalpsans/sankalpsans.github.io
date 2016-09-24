@@ -6,6 +6,7 @@
         body {
             width: 500px;
             margin: 0 auto;
+            font-family:sans-serif;
         }
         
         .love {
@@ -51,7 +52,7 @@
         }
         
         .one-post {
-            background: #ddd;
+            background: #f2f2f2;
             width: 100%;
             height: 200px;
         }
@@ -87,6 +88,17 @@
    <body>
    <div class="holder">
         <div class="one-post">
+          <h4 style="
+            font-family: sans-serif;
+            margin: 6px;
+            padding: 8px 4px;
+        ">Moar cat videos from people you seldom meet.</h4><div style="
+            float: left;
+            width: 98%;
+            background: #c5c5c5;
+            height: 154px;
+            margin-left: 1%;
+        "></div>
         </div>
         <div class="heart-holder">
             <span class="love">♥</span>
