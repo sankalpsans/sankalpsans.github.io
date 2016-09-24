@@ -65,18 +65,9 @@
             background:#eee;
         }
 
-        .src-btn{
-            cursor:pointer;
-            position: absolute;margin-left: 100px;margin-top: 13px;
-    background: #4791da;
-    color: #fff;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 3px;
-    font-weight: bold;
-    border-bottom: solid 2px #3573af;
+        .src-btn{ cursor: pointer; position: absolute; right: 0; top: 5px; background: #4791da; color: #fff; f
+        ont-family: sans-serif; text-decoration: none; 
+        padding: 3px 8px; font-size: 12px; border-radius: 3px; font-weight: bold; border-bottom: solid 2px #3573af;
         }
         .src-btn:hover{
             background:#64a7e8;
@@ -102,7 +93,7 @@
             float: left;
             width: 98%;
             background: #c5c5c5;
-            height: 154px;
+            height: 136px;
             margin-left: 1%;
         "></div>
         </div>
@@ -113,7 +104,7 @@
             <span class="hem">H</span>
         </div>
     </div>
-    <div>
+    <div style ="position:relative">
     <a class="grey-btn" href="https://github.com/sankalpsans">← Back to github profile</a>
     <a class="src-btn" href="https://github.com/sankalpsans/fb-peace-button">View source</a>
     </div>
