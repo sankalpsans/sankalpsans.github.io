@@ -55,6 +55,13 @@
             width: 100%;
             height: 200px;
         }
+        .grey-btn{
+            position: fixed; bottom: 5px; border-radius: 3px; background: #ddd;
+            color: #333; font-family: sans-serif; padding: 3px 7px; font-size: 12px; text-decoration: none;
+        }
+        .grey-btn:hover{
+            background:#eee;
+        }
     </style>
    </head>
    <body>
@@ -69,7 +76,7 @@
         </div>
     </div>
     <div>
-    <a href="https://github.com/sankalpsans">Back to github profile</a>
+    <a class="grey-btn" href="https://github.com/sankalpsans">&barr; Back to github profile</a>
     </div>
    </body>
    <script>
