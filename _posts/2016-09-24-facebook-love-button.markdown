@@ -62,6 +62,22 @@
         .grey-btn:hover{
             background:#eee;
         }
+
+        .src-btn{
+            position: absolute;margin-left: 100px;margin-top: 13px;
+    background: #4791da;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    border-bottom: solid 2px #3573af;
+        }
+        .src-btn:hover{
+            background:#64a7e8;
+        }
     </style>
    </head>
    <body>
@@ -77,6 +93,7 @@
     </div>
     <div>
     <a class="grey-btn" href="https://github.com/sankalpsans">← Back to github profile</a>
+    <a class="src-btn" href="https://github.com/sankalpsans/fb-peace-button">View source</a>
     </div>
    </body>
    <script>
