@@ -55,6 +55,7 @@
             background: #f2f2f2;
             width: 100%;
             height: 200px;
+            position:relative;
         }
         .grey-btn{
             position: fixed; bottom: 5px; border-radius: 3px; background: #ddd;
@@ -83,6 +84,9 @@
         .src-btn:active{
             background:#4582bd;
         }
+        .fb-date{
+            position: absolute; right: 7px; top: 7px; font-size: 9px; color: #666;
+        }
     </style>
    </head>
    <body>
@@ -92,7 +96,9 @@
             font-family: sans-serif;
             margin: 6px;
             padding: 8px 4px;
-        ">Moar cat videos from people you seldom meet.</h4><div style="
+        ">"Love" this yet another cat videos from people you seldom meet.</h4>
+        <span class="fb-date">1 min ago</span>
+        <div style="
             float: left;
             width: 98%;
             background: #c5c5c5;
