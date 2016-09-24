@@ -76,7 +76,7 @@
         </div>
     </div>
     <div>
-    <a class="grey-btn" href="https://github.com/sankalpsans">&barr; Back to github profile</a>
+    <a class="grey-btn" href="https://github.com/sankalpsans">← Back to github profile</a>
     </div>
    </body>
    <script>
