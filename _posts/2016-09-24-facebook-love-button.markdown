@@ -79,4 +79,50 @@
   ga('send', 'pageview');
 
 </script>
+<script>
+            var numberOfHearts = 40;
+            var varianceInSize = 3;
+            var delay = 200; //milliseconds
+            var length = -200;
+            HTMLElement.prototype.multiply = function() {
+                var domToClone = this;
+                this.style.zIndex = "2";
+                this.addEventListener("click", function explode() {
+                    
+                    for(var i = 0; i < numberOfHearts; i += 1) {
+                        var newElement = this.cloneNode(true);
+                        var completeStyle = window.getComputedStyle(this, null).cssText;
+                        newElement.style.cssText = completeStyle;
+                        var finalXTranslation = (Math.random() - .5)  * length; // So that all hearts toss evenly both left and right sides
+                        var finalYTranslation = (Math.random() + .2) / 2 * length;
+                        var angle = Math.atan(finalYTranslation / finalXTranslation) * (180 / Math.PI);
+                        var scale = Math.random() * varianceInSize;
+                        newElement.setAttribute("finalXTranslation", finalXTranslation);
+                        newElement.setAttribute("finalYTranslation", finalYTranslation);
+                        newElement.setAttribute("scale", scale);
+                        newElement.style.zIndex="1";
+                        newElement.style.transform = "rotate("+ angle +"deg) ";
+                        this.parentNode.appendChild(newElement);
+                    }
+                    setTimeout(function() {
+                        for(var i = 1; i < domToClone.parentNode.children.length; i += 1) {
+                            var thisHeart = domToClone.parentNode.children[i];
+                            thisHeart.style.transform = thisHeart.style.transform +
+                            " scale(" + thisHeart.attributes.scale.value + ")"+
+                            " translate("+thisHeart.attributes.finalXTranslation.value+"px, "+thisHeart.attributes.finalYTranslation.value+"px)";
+                        }
+                    }, delay);
+                    setTimeout(function() {
+                        for(var i = 1; i < domToClone.parentNode.children.length; i += 1) {
+                            var thisHeart = domToClone.parentNode.children[i];
+                            thisHeart.style.transition = "all "+(Math.random() * 2)+"s";
+                            thisHeart.style.opacity = "0";
+                        }
+                    }, delay);
+                    
+                });
+            }
+            document.querySelector('.love').multiply();
+            document.querySelector('.hem').multiply();
+            </script>
 </html>
